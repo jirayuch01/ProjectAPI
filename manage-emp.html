@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="image/favicon.ico">
+    <link rel="shortcut icon" type="image/ico" href="image/favicon.ico">
+    <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <title>Hostel | Manage Employee</title>
+    <link rel="stylesheet" href="css/include.css">
+    <link rel="stylesheet" href="css/top.css">
+    <style>
+        .myTable {
+            width: 100%;
+            text-align: left;
+            background-color: lemonchiffon;
+            border-collapse: collapse;
+        }
+
+        .myTable th {
+            background-color: goldenrod;
+            color: white;
+        }
+
+        .myTable td,
+        .myTable th {
+            padding: 10px;
+            border: 1px solid goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="image/cursor.png" border="0" style="position:absolute; top: 0px; right: 0px;">
+    <a href="javascript:" id="return-to-top" style="z-index: 2048;"><i class="fa fa-chevron-up"></i></a>
+    <div class="brand clearfix">
+        <a href="#" class="dashboard logo" style="font-size:1.1em; color: #ffffff;">
+            <i class="fa fa-h-square" aria-hidden="true"> Hostel</i></a>
+        <span class="menu-btn"><i class="fa fa-bars"></i></span>
+        <ul class="ts-profile-nav">
+            <li class="ts-account">
+                <a href="#" class="account">
+                    <img src="image/ts-avatars.jpg" class="ts-avatar hidden-side">
+                    <span class="username" style="color:yellow"></span>
+                    <i class="fa fa-angle-down hidden-side"></i>
+                </a>
+                <ul>
+                    <li><a href="#" class="account">My Account</a></li>
+                    <li><a href="index.html" onclick="deleteCookie()">Log out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="ts-main-content">
+        <nav class="ts-sidebar">
+            <ul class="ts-sidebar-menu">
+                <li class="ts-label">Main</li>
+                <li><a href="#" class="dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
+                <li><a href="#" class="account"><i class="fa fa-desktop" aria-hidden="true"></i> My Account</a></li>
+                <li><a href="#" class="my-profile"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; My Profile</a></li>
+                <li><a href="#" class="manage-emp"><i class="fa fa-users"></i> Employee</a>
+                    <ul>
+                        <li><a href="#" class="add-emp">Add Employee</a></li>
+                        <li><a href="#" class="manage-emp">Manage Employee</a></li>
+                    </ul>
+                </li>
+                <li style="position: absolute; bottom: 0;"><a href="index.html" onclick="deleteCookie()"><i class="fa fa-unlock"></i>&nbsp; Log out</a>
+            </ul>
+        </nav>
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <br><br>
+                        <h2 class="page-title">Manage Employee</h2>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">All Employee Details</div>
+                            <div class="panel-body">
+                                <div class="col-sm-12" id="ovs-sum">
+                                    <table id="summary-table" class="myTable display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th sort="index">ID</th>
+                                                <th sort="index">FirstName</th>
+                                                <th sort="index">LastName</th>
+                                                <th sort="index">E-Mail Address</th>
+                                                <th sort="index">Telephone</th>
+                                                <th sort="index">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>FirstName</th>
+                                                <th>LastName</th>
+                                                <th>E-Mail Address</th>
+                                                <th>Telephone</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="panel-footer panel-heading"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/cache.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="js/chartData.js"></script>
+    <script type="text/javascript" src="js/top.js"></script>
+    <script type="text/javascript" src="js/manage-emp.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        console.log($.cookie('keep'));
+
+        function deleteCookie() {
+            $.removeCookie('keep');
+            console.log($.removeCookie('keep'));
+        }
+    </script>
+</body>
+
+</html>
